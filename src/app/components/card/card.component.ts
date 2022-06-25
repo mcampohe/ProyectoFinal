@@ -18,4 +18,6 @@ export class CardComponent implements OnInit {
     this.route.navigate(['/detail/'+index]);
   }
   
+  peso = '$';
+
 }
