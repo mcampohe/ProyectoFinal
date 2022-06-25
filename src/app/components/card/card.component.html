@@ -6,7 +6,7 @@
                 <img class="card-img-top" [src]="product.img" alt="Card image cap" width="250" height="250">
                 <div class="card-body" style="text-align: center;">
                   <h5 class="card-title">{{'PRODUCTO: ' | lowercase}} {{product.nombre}}</h5>
-                  <p class="card-text">{{peso}}{{product.precio}}</p>
+                  <p class="card-text">{{product.precio | currency: 'CLP'}}</p>
                   <p class="card-text">{{product.descripcion}}</p>
                   <a class="btn btn-secondary" (click)="detailProduct(i)">Ver</a>
                 </div>

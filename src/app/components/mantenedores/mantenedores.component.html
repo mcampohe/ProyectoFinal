@@ -18,7 +18,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{product.nombre}}</h5>
                   <p class="card-text">{{product.tipo}}</p>
-                  <p class="card-text">{{product.precio}}</p>
+                  <p class="card-text">{{product.precio | currency: 'CLP'}}</p>
                   <p class="card-text">{{product.descripcion}}</p>
                   <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-warning" (click)="editProduct(i)">Editar</button> 

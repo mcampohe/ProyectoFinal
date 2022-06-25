@@ -12,8 +12,8 @@ import { ShopComponent } from './components/shop/shop.component';
 const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'product', component:ProductComponent},
-  {path:'addProduct', component:FormComponent},
-  {path:'editProduct/:id', component:FormEditComponent},
+  {path:'addProduct', component:FormComponent,canActivate: [AuthGuard]},
+  {path:'editProduct/:id', component:FormEditComponent,canActivate: [AuthGuard]},
   {path:'detail/:id', component:DetailComponent},
   {path:'shop', component:ShopComponent},
   {path:'mantenedores', component:MantenedoresComponent, canActivate: [AuthGuard]},
