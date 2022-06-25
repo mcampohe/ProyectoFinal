@@ -1,0 +1,57 @@
+<br>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8" style="text-align: center;">
+    <h3><strong>Mantenedor</strong></h3>
+    <button id="btn-new-product" type="button" class="btn btn-success" (click)="showModal()">Agregar producto</button>
+    <br>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <div class="card-columns">
+            <div *ngFor="let product of products; let i = index" class="card" style="width: 12rem;">
+                <img class="card-img-top" [src]="product.img" alt="Card image cap" width="130" height="130">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.nombre}}</h5>
+                  <p class="card-text">{{product.tipo}}</p>
+                  <p class="card-text">{{product.precio}}</p>
+                  <p class="card-text">{{product.descripcion}}</p>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-warning" (click)="editProduct(i)">Editar</button> 
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>   
+    <div class="col-sm-2"></div>
+</div>
+
+
+
+<div class="modal fade" id="modalAddProduct" tabindex="-1" role="dialog" aria-labelledby="modalAddProduct" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="text-align: center;"><strong>Nuevo Producto</strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <app-form></app-form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
